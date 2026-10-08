@@ -75,6 +75,9 @@ Cadastre na Vercel (Settings → Environment Variables, ambiente **Production** 
 
 ## Pendências com o Diego
 
+- [ ] **GitHub → Settings → General → Default branch: trocar para `main`.** Como o repo estava vazio, a primeira branch enviada (`claude/eager-hopper-2cnxi7`) virou a padrão, e a Vercel está usando ela como produção. Até trocar, mantenho as duas branches no mesmo commit. Depois confira em Vercel → Settings → Git → Production Branch = `main`.
+- [ ] O repositório está **público** (inclui o PRD). Se não for intencional: GitHub → Settings → Danger Zone → Change visibility → Private.
+
 - [ ] Cadastrar as variáveis "Agora" na Vercel e fazer Redeploy.
 - [ ] Supabase → Authentication → URL Configuration: Site URL = URL da Vercel; Redirect URLs = `https://<dominio>/auth/callback` e `https://<dominio>/auth/confirm`.
 - [ ] Liberar `developer.bling.com.br`, `directd.com.br`, `developers.facebook.com` na rede do ambiente de desenvolvimento.
