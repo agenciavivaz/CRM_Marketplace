@@ -35,6 +35,7 @@ Atualizado ao fim de cada fase. Plano e critérios de aceite: [PRD seção 16](P
 **Decisões tomadas na fase**
 
 - Push direto na `main` ao fim de cada fase, só com lint + typecheck + testes + build verdes (decisão do Diego).
+- `vercel.json` fixa `framework: nextjs` e região `gru1`: o projeto da Vercel foi criado com o repo vazio, ficou sem preset e os dois primeiros deploys falharam. `gru1` (São Paulo) fica ao lado do Supabase (`sa-east-1`).
 - Fonte do sistema em vez de `next/font/google` (build não depende de rede externa).
 - Nome do arquivo de migration = versão registrada no Supabase, para `supabase db push` futuro não reaplicar.
 - Alerta restante do advisor (`create_organization` é `security definer` executável por `authenticated`) é intencional: é a única forma de criar loja e já valida `auth.uid()`.
